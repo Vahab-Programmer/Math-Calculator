@@ -1,6 +1,8 @@
 from tkinter import *
 from turtle import RawTurtle
 from sys import maxsize
+__author__="Vahab Programmer https://Github.com/Vahab-Programmer"
+__version__="0.1.2"
 def inside(x:int) -> int:return (x-2)*180 if x else 0
 def inside_one(x:int) -> int:return inside(x)//x if x else 0
 def out_one(x:int) -> int:return 180-inside_one(x) if x else 0
