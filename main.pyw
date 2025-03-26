@@ -3,6 +3,7 @@ from turtle import RawTurtle
 from sys import maxsize
 __author__="Vahab Programmer https://Github.com/Vahab-Programmer"
 __version__="0.1.2"
+def center(win:Tk)->None:win.update();win.geometry("+{}+{}".format((win.winfo_screenwidth()//2)-(win.winfo_width()//2),(win.winfo_screenheight()//2)-(win.winfo_height()//2)))
 def inside(x:int) -> int:return (x-2)*180 if x else 0
 def inside_one(x:int) -> int:return inside(x)//x if x else 0
 def out_one(x:int) -> int:return 180-inside_one(x) if x else 0
@@ -94,7 +95,8 @@ def calc_prime() -> None:
 f=("Tahoma",11)
 root=Tk()
 root.title("Math Calculator")
-root.geometry("500x400+400+150")
+root.geometry("500x400")
+center(root)
 root.resizable(False,False)
 frame1=Frame(root,width=485,height=190,borderwidth=2,relief="raised")
 frame2=Frame(root,width=485,height=155,borderwidth=2,relief="raised")
